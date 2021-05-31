@@ -2,7 +2,7 @@ import { useForm } from "react-cool-form";
 
 const Field = ({ label, id, error, ...rest }) => (
   <div>
-    <label htmlFor={id}>{label}</label>
+    <label className="form__imput" htmlFor={id}>{label}</label>
     <input id={id} {...rest} />
     {error && <p>{error}</p>}
   </div>
@@ -22,7 +22,7 @@ const Login = (props) =>{
 
 
     return(
-          <form ref={form} noValidate>
+          <form className="form" ref={form} noValidate>
             <Field
               label="Username"
               id="username"
@@ -39,7 +39,7 @@ const Login = (props) =>{
               minLength={8}
               error={errors.password}
             />
-            <input type="submit" />
+            <input className="form__submit" type="submit" />
           </form>
     );
 }

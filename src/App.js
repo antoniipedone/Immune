@@ -22,6 +22,7 @@ const App = () => {
     mobile_number: null,
     isAuth: false
   });
+
   const users= {
     0: {
       name: "Antonio",
@@ -83,7 +84,6 @@ const App = () => {
       }
     }
   };
-
 
   return (
     <div>
