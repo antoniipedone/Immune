@@ -2,10 +2,12 @@ const Workout = props => {
     return(
         <div>
             <h1>Workout</h1>
-            <div><p>Card</p></div>
-            <div><p>Card</p></div>
-            <div><p>Card</p></div>
-            <div><p>Card</p></div>
+            <div className="cardContainer">
+                <div className="card">
+                    <p className="card__title">nome</p>
+                    <img className="card___img"></img>
+                </div>
+            </div>
         </div>
     );
 }
