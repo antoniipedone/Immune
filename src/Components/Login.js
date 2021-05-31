@@ -2,7 +2,7 @@ import { useForm } from "react-cool-form";
 
 const Field = ({ label, id, error, ...rest }) => (
   <div>
-    <label className="form__imput" htmlFor={id}>{label}</label>
+    <label className="form__input" htmlFor={id}>{label}</label>
     <input id={id} {...rest} />
     {error && <p>{error}</p>}
   </div>
