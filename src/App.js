@@ -49,31 +49,31 @@ const App = () => {
   const receipt = [
     {
       name:"Insalata",
-      date: new Date(2021,06,1),
+      date: new Date(2021,6,1),
       information: "",
       kind: "primo"
     },
     {
       name:"Pasta e patate",
-      date: new Date(2021,06,1),
+      date: new Date(2021,6,1),
       information: "",
       kind: "secondo"
     },
     {
       name:"Petto di pollo",
-      date: new Date(2021,06,3),
+      date: new Date(2021,6,3),
       information: "",
       kind: "contorno"
     },
     {
       name:"Pizza",
-      date: new Date(2021,06,4),
+      date: new Date(2021,6,4),
       information: "",
       kind: "primo"
     },
     {
       name:"Sushino",
-      date: new Date(2021,06,7),
+      date: new Date(2021,6,7),
       information: "",
       kind: "primo"
     }
