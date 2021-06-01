@@ -25,7 +25,7 @@ const Pages = props =>{
                 <ContactDoctor user={props.user} />
             </Route>
             <Route path='/receipt'>
-                <Receipt user={props.user} />
+                <Receipt user={props.user} receipt={props.receipt} />
             </Route>
         </Fragment>
     );
