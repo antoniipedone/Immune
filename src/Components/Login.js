@@ -1,10 +1,10 @@
 import { useForm } from "react-cool-form";
 
 const Field = ({ label, id, error, ...rest }) => (
-  <div>
-    <label className="form__input" htmlFor={id}>{label}</label>
+  <div className="form__field">
+    <label className="form__label" htmlFor={id}>{label}</label>
     <input id={id} {...rest} />
-    {error && <p>{error}</p>}
+    {error && <p className="form__error">{error}</p>}
   </div>
 );
 
@@ -22,25 +22,39 @@ const Login = (props) =>{
 
 
     return(
-          <form className="form" ref={form} noValidate>
-            <Field
-              label="Username"
-              id="username"
-              name="username"
-              required
-              error={errors.username}
-            />
-            <Field
-              label="Password"
-              id="password"
-              name="password"
-              type="password"
-              required
-              minLength={8}
-              error={errors.password}
-            />
-            <input className="form__submit" type="submit" />
-          </form>
+          <div class="login__container">
+            <div className="login__welcome">
+              <h3>Welcome</h3>
+              <p>Sign in to continue</p>
+            </div>
+            <form className="form" ref={form} noValidate>
+              <Field
+                placeholder="Username"
+                id="username"
+                name="username"
+                required
+                error={errors.username}
+                className="form__input"
+              />
+              <Field
+                placeholder="Password"
+                id="password"
+                name="password"
+                type="password"
+                required
+                minLength={8}
+                error={errors.password}
+                className="form__input"
+              />
+              <p className="form__forgotPass">Forgot your password?</p>
+              <input className="form__submit" type="submit" value="Sign in" />
+              <p className="form__separator">or</p>
+              <input className="form__submit form__submit--NHS" type="submit" value="Log in with NHS" />
+            </form>
+            <div className="login__terms">
+              <p>By signing in, you accept our Terms and Conditions</p>
+            </div>
+          </div>
     );
 }
 

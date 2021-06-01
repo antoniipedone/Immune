@@ -1,7 +1,7 @@
 import React, { useState , useEffect } from 'react';
 import { Route, Switch, useHistory } from 'react-router-dom';
 
-import './App.css';
+import './App.scss';
 import Login from './Components/Login';
 import Pages from './Components/Pages/pages';
 
@@ -86,7 +86,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <Switch>
         <Route path='/' exact>
           <Login onAuth={onAuthHandler} />

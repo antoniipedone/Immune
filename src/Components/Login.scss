@@ -1,0 +1,63 @@
+.login{
+    &__container{
+        position: relative;
+        height: 100%;
+    }
+    &__welcome{
+        margin: 2rem auto;
+        text-align: center;
+        & h3{
+            color: #181461;
+        }
+    }
+    &__terms{
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+.form{
+    &__field{
+        margin-bottom: 1rem;
+    }
+    &__input{
+        width: 100%;
+        border-radius: .7rem;
+        border: none;
+        padding: 1.2rem 1rem;
+        font-family: 'Inter';
+        font-size: 1.6rem;
+        background-color: rgba($color: white, $alpha: .6);       
+    }
+    &__error{
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: red;
+    }
+
+    &__submit{
+        width: 100%;
+        border-radius: .7rem;
+        border: none;
+        padding: 1.4em .7rem;
+        font-family: 'Inter';
+        background-color: rgba($color: #545EA7, $alpha: 1);
+        color: white; 
+        font-weight: bold;
+        &--NHS{
+            background-color: #005EB8;
+        }
+    }
+    &__forgotPass{
+        color: grey;
+        font-size: 1.2rem;
+        text-align: right;
+        margin-bottom: 4rem;
+    }
+    &__separator{
+        text-align: center;
+        color: grey;
+        font-size: 1.2rem;
+        margin: 1rem;
+    }
+}
