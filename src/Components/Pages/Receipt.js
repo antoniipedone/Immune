@@ -11,7 +11,7 @@ const Receipt = props => {
 
     return(
         <div>
-            <h1>Receipt</h1>
+            <h1>Receipt for {props.user.name}</h1>
 
             <input className="searchBar" type="text" value={search} onChange={searchHandler}/>
             {/* Tabs => Primi - Secondi - Contorni */}
@@ -21,8 +21,8 @@ const Receipt = props => {
                     <span key={id} >
                         <p>{meal.date}</p>
                         <p>{meal.name}</p>
-                        <span><img /> span activate more informations</span>
-                        <p>receipt informations</p>
+                        <span>+</span>
+                        <p>{meal.information}</p>
                     </span>
                 )
             } )}            
