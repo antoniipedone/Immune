@@ -1,5 +1,6 @@
 import { useForm } from "react-cool-form";
 
+
 const Field = ({ label, id, error, ...rest }) => (
   <div className="form__field">
     <label className="form__label" htmlFor={id}>{label}</label>
@@ -49,7 +50,7 @@ const Login = (props) =>{
               <p className="form__forgotPass">Forgot your password?</p>
               <input className="form__submit" type="submit" value="Sign in" />
               <p className="form__separator">or</p>
-              <input className="form__submit form__submit--NHS" type="submit" value="Log in with NHS" />
+              <input className="form__submit form__submit--NHS" type="submit" value=" " />
             </form>
             <div className="login__terms">
               <p>By signing in, you accept our Terms and Conditions</p>

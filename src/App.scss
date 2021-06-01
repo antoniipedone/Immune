@@ -1,5 +1,6 @@
 @import "./Components/Navigation.scss";
 @import "./Components/Login.scss";
+@import "./Components/Pages/Profile.scss";
 
 
 @import url('https://rsms.me/inter/inter.css');
@@ -34,7 +35,13 @@ a{
 
 .container{
     max-width: 80%;
-    height: 100vh;
+    height: calc(100vh - 5rem);
     margin: auto;
     padding: 1rem;
+    overflow-y: auto;
+}
+
+h1{
+    font-size: 1.2rem;
+    color:#181461; 
 }

@@ -39,13 +39,18 @@
         width: 100%;
         border-radius: .7rem;
         border: none;
-        padding: 1.4em .7rem;
+        height: 5rem;
+        padding: 1.6rem .6rem;
         font-family: 'Inter';
         background-color: rgba($color: #545EA7, $alpha: 1);
         color: white; 
         font-weight: bold;
         &--NHS{
             background-color: #005EB8;
+            background-image:  url('../Assets/imgs/LogInWith_Original_LogoAndTextOnly.svg');
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-origin: content-box;
         }
     }
     &__forgotPass{
