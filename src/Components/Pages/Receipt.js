@@ -28,7 +28,7 @@ const Receipt = props => {
                 // some logic for => primo - secondo - contorno
                 return(
                     <span key={id} >
-                        <p>{meal.date.toString()}</p>
+                        <p>{meal.date.toLocaleDateString()}</p>
                         <p>{meal.name}</p>
                         <span>+</span>
                         <p>{meal.information}</p>
