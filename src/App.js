@@ -49,25 +49,37 @@ const App = () => {
   const users= {
     0: {
       name: "Antonio",
+      surname: "Pezzella",
       gender: "Male",
-      date_of_birth: "01/05/1991",
+      birth: "01/05/1991",
       NHS_Number: 51515151,
       address: "Via Vittorio Veneto, 45",
       town: "Grumo Nevano (Napoli)",
       postcode: "80028",
       email: "nikay360@hotmail.it" ,
-      mobile_number: "3277088590"
+      mobile_number: "3277088590",
+      img: "../Assets/imgs/profile/free-profile-photo-whatsapp-4.png",
+      pathologies: [
+        "Psoriasis",
+        "Coeliac" 
+      ]
     },
     1: {
       name: "Francesca",
+      surname: "Pezzella",
       gender: "Female",
-      date_of_birth: "12/01/1988",
+      birth: "12/01/1988",
       NHS_Number: 51515451,
       address: "Via Frezza, 4",
       town: "Miano (Napoli)",
       postcode: "80012",
       email: "nidda0@hotmail.it" ,
-      mobile_number: "3245088590"
+      mobile_number: "3245088590",
+      img: "../Assets/imgs/profile/free-profile-photo-whatsapp-4.png",
+      pathologies: [
+        "Lupus Erythematosus" ,
+        "Diabetes Type 1" 
+      ]
     }    
   }; 
   
