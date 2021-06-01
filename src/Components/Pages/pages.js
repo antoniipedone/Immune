@@ -16,7 +16,7 @@ const Pages = props =>{
                 <Calendar user={props.user} />
             </Route>
             <Route path='/workout'>
-                <Workout user={props.user} />
+                <Workout user={props.user} lessions={props.workout} />
             </Route>
             <Route path='/profile'>
                 <Profile user={props.user} />

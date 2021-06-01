@@ -1,13 +1,10 @@
+import Card from '../card';
+
 const Workout = props => {
     return(
         <div>
-            <h1>Workout</h1>
-            <div className="cardContainer">
-                <div className="card">
-                    <p className="card__title">nome</p>
-                    <img className="card___img"></img>
-                </div>
-            </div>
+            <h1>Workout of {props.user.name}</h1>
+            {props.lessions.map( (card, id) =>(<Card name={card.title} link={card.link} img={card.img} key={id} />))} 
         </div>
     );
 }

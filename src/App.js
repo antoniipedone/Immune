@@ -23,6 +23,29 @@ const App = () => {
     isAuth: false
   });
 
+  const [videoLession, setVideoLession] = useState([
+    {
+      title: "Training 1",
+      img:"../Assets/imgs/workout/undraw_fitness_stats_sht6.svg",
+      link:"https://www.youtube.com/watch?v=UItWltVZZmE"
+    },
+    {
+      title: "Training 2",
+      img:"../Assets/imgs/workout/undraw_healthy_habit_bh5w.svg",
+      link:"https://www.youtube.com/watch?v=g_tea8ZNk5A"
+    },
+    {
+      title: "Training 3",
+      img:"../Assets/imgs/workout/undraw_Meditation_o89g.svg",
+      link:"https://www.youtube.com/watch?v=8DZktowZo_k"
+    },
+    {
+      title: "Training 4",
+      img:"../Assets/imgs/workout/undraw_workout_gcgu.svg",
+      link:"https://www.youtube.com/watch?v=GLy2rYHwUqY"
+    }
+  ]);
+
   const users= {
     0: {
       name: "Antonio",
@@ -91,7 +114,7 @@ const App = () => {
         <Route path='/' exact>
           <Login onAuth={onAuthHandler} />
         </Route>
-        {(allineamento.isAuth) ? <Pages user={allineamento} /> : <Route><h1>Not logged</h1></Route>}
+        {(allineamento.isAuth) ? <Pages user={allineamento} workout={videoLession} /> : <Route><h1>Not logged</h1></Route>}
       </Switch>
     </div>
   );
