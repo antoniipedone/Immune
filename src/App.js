@@ -46,7 +46,40 @@ const App = () => {
     }
   ]);
 
-  const users= {
+  const receipt = [
+    {
+      name:"Insalata",
+      date: new Date(2021,06,1),
+      information: "",
+      kind: "primo"
+    },
+    {
+      name:"Pasta e patate",
+      date: new Date(2021,06,1),
+      information: "",
+      kind: "secondo"
+    },
+    {
+      name:"Petto di pollo",
+      date: new Date(2021,06,3),
+      information: "",
+      kind: "contorno"
+    },
+    {
+      name:"Pizza",
+      date: new Date(2021,06,4),
+      information: "",
+      kind: "primo"
+    },
+    {
+      name:"Sushino",
+      date: new Date(2021,06,7),
+      information: "",
+      kind: "primo"
+    }
+  ] 
+
+  const users = {
     0: {
       name: "Antonio",
       surname: "Pezzella",
@@ -126,7 +159,7 @@ const App = () => {
         <Route path='/' exact>
           <Login onAuth={onAuthHandler} />
         </Route>
-        {(allineamento.isAuth) ? <Pages user={allineamento} workout={videoLession} /> : <Route><h1>Not logged</h1></Route>}
+        {(allineamento.isAuth) ? <Pages user={allineamento} workout={videoLession} receipt={receipt} /> : <Route><h1>Not logged</h1></Route>}
       </Switch>
     </div>
   );
