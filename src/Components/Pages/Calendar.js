@@ -14,8 +14,8 @@ const Calendar = props => {
 
         return(
             <span key={id} >
-                <p>{appointment.date.toLocaleDateString()}</p>
-                <p>{appointment.name}</p>
+                <p>{sorting.date.toLocaleDateString()}</p>
+                <p>{sorting.name}</p>
             </span>
         )
     } )
