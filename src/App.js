@@ -46,7 +46,40 @@ const App = () => {
     }
   ]);
 
-  const users= {
+  const receipt = [
+    {
+      name:"Insalata",
+      date: new Date(2021,6,1),
+      information: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      kind: "primo"
+    },
+    {
+      name:"Pasta e patate",
+      date: new Date(2021,6,1),
+      information: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      kind: "secondo"
+    },
+    {
+      name:"Petto di pollo",
+      date: new Date(2021,6,3),
+      information: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      kind: "contorno"
+    },
+    {
+      name:"Pizza",
+      date: new Date(2021,6,4),
+      information: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      kind: "primo"
+    },
+    {
+      name:"Sushino",
+      date: new Date(2021,6,7),
+      information: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      kind: "primo"
+    }
+  ] 
+
+  const users = {
     0: {
       name: "Antonio",
       surname: "Pezzella",
@@ -126,7 +159,7 @@ const App = () => {
         <Route path='/' exact>
           <Login onAuth={onAuthHandler} />
         </Route>
-        {(allineamento.isAuth) ? <Pages user={allineamento} workout={videoLession} /> : <Route><h1>Not logged</h1></Route>}
+        {(allineamento.isAuth) ? <Pages user={allineamento} workout={videoLession} receipt={receipt} /> : <Route><h1>Not logged</h1></Route>}
       </Switch>
     </div>
   );
