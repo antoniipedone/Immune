@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Calen from 'react-calendar'; // https://github.com/wojtekmaj/react-calendar#readme
+import DayPicker from 'react-day-picker';
 
-import 'react-calendar/dist/Calendar.css';
+import 'react-day-picker/lib/style.css';
 
 const Calendar = props => {
 
@@ -27,8 +27,8 @@ const Calendar = props => {
         <div>
             <h1>Calendar</h1>
             <div className="calendar">
-                <Calen 
-                    className="react-calendar" />
+                <DayPicker 
+                     selectedDays />
                 <div>
                     <ul className="calendar__switch">
                         <li className="calendar__switch__element--active" >Upcoming</li>
