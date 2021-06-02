@@ -11,6 +11,7 @@ import workoutImage3 from './Assets/imgs/workout/workout3.svg';
 import workoutImage4 from './Assets/imgs/workout/workout4.svg';
 
 import profileImage1 from './Assets/imgs/profile/free-profile-photo-whatsapp-4.png';
+import { findAllInRenderedTree } from 'react-dom/test-utils';
 
 
 
@@ -161,13 +162,30 @@ const App = () => {
     }
   };
 
+  const logoutHabdler = () =>{
+    alert("LogOut");
+    setAllineamento({
+      name: null,
+      gender: null,
+      date_of_birth: null,
+      NHS_Number: null,
+      address: null,
+      town: null,
+      postcode: null,
+      email: null ,
+      mobile_number: null,
+      isAuth: false
+    });
+    history.push('/');
+  }
+
   return (
     <div className="container">
       <Switch>
         <Route path='/' exact>
           <Login onAuth={onAuthHandler} />
         </Route>
-        {(allineamento.isAuth) ? <Pages user={allineamento} workout={videoLession} receipt={receipt} /> : <Route><h1>Not logged</h1></Route>}
+        {(allineamento.isAuth) ? <Pages user={allineamento} workout={videoLession} receipt={receipt} logout={logoutHabdler} /> : <Route><h1>Not logged</h1></Route>}
       </Switch>
     </div>
   );
