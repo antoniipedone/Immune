@@ -10,6 +10,9 @@ import workoutImage2 from './Assets/imgs/workout/workout2.svg';
 import workoutImage3 from './Assets/imgs/workout/workout3.svg';
 import workoutImage4 from './Assets/imgs/workout/workout4.svg';
 
+import profileImage1 from './Assets/imgs/profile/free-profile-photo-whatsapp-4.png';
+
+
 
 const App = () => {
 
@@ -96,7 +99,7 @@ const App = () => {
       postcode: "80028",
       email: "nikay360@hotmail.it" ,
       mobile_number: "3277088590",
-      img: "../Assets/imgs/profile/free-profile-photo-whatsapp-4.png",
+      img: profileImage1,
       pathologies: [
         "Psoriasis",
         "Coeliac" 
@@ -113,7 +116,7 @@ const App = () => {
       postcode: "80012",
       email: "nidda0@hotmail.it" ,
       mobile_number: "3245088590",
-      img: "../Assets/imgs/profile/free-profile-photo-whatsapp-4.png",
+      img: profileImage1,
       pathologies: [
         "Lupus Erythematosus" ,
         "Diabetes Type 1" 
