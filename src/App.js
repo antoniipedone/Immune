@@ -11,7 +11,7 @@ import workoutImage3 from './Assets/imgs/workout/workout3.svg';
 import workoutImage4 from './Assets/imgs/workout/workout4.svg';
 
 import profileImage1 from './Assets/imgs/profile/free-profile-photo-whatsapp-4.png';
-import { findAllInRenderedTree } from 'react-dom/test-utils';
+
 
 
 
