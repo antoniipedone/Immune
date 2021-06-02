@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import account from '../Assets/imgs/account.svg';
-const Navigation = () =>{
+const Navigation = props =>{
     return(
         <nav>
             <ul className="menu">
@@ -20,7 +20,7 @@ const Navigation = () =>{
                     <NavLink activeClassName={'menu__item__link'} to='/receipt'><img src={account}></img></NavLink>
                 </li>
                 <li className="menu__item">
-                    <span>logOut</span>
+                    <a href="" className="menu__item__link" onClick={props.logout}><img src={account} /></a>
                 </li>
             </ul>
         </nav>
