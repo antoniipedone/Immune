@@ -23,10 +23,12 @@ html {
 }
 
 body{
-    background: #ECF1FA;
+    background: rgb(236,241,250);
+    background: linear-gradient(180deg, rgba(236,241,250,1) 65%, rgba(86,96,168,0.3) 100%);
     font-size: 1.6rem;
     font-family: 'Inter', sans-serif; 
     overflow: hidden;
+    height: 100vh;
 }
 
 a{
@@ -35,7 +37,7 @@ a{
 }
 
 .container{
-    height: calc(100vh - 5rem);
+    max-height: calc(100vh - 5rem);
     margin: auto;
     padding: 1rem;
     overflow-y: auto;
@@ -43,6 +45,5 @@ a{
 
 h1{
     font-size: 1.4rem;
-    margin-bottom: 1rem;
     color:#181461; 
 }
