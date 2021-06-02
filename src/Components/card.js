@@ -1,10 +1,8 @@
 const Card = props =>{
     return(
-        <a href={props.link} target="_blank" rel="noopener noreferrer">
-            <div className="card">
+        <a className="card" href={props.link} target="_blank" rel="noopener noreferrer">
                 <p className="card__title">{props.name}</p>
                 <img className="card___img" src={props.img} alt={props.name} />
-            </div>
         </a>
     );
 }
