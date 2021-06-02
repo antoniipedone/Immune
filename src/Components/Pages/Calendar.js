@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import DayPicker from 'react-day-picker';
+import DayPicker from 'react-day-picker'; // https://react-day-picker.js.org/
 
 import 'react-day-picker/lib/style.css';
 
