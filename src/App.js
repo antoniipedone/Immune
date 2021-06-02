@@ -5,7 +5,11 @@ import './App.scss';
 import Login from './Components/Login';
 import Pages from './Components/Pages/pages';
 
-import workoutImages from './Assets/imgs/workout/undraw_fitness_stats_sht6.svg';
+import workoutImage1 from './Assets/imgs/workout/workout1.svg';
+import workoutImage2 from './Assets/imgs/workout/workout2.svg';
+import workoutImage3 from './Assets/imgs/workout/workout3.svg';
+import workoutImage4 from './Assets/imgs/workout/workout4.svg';
+
 
 const App = () => {
 
@@ -27,22 +31,22 @@ const App = () => {
   const [videoLession, setVideoLession] = useState([
     {
       title: "Training 1",
-      img: workoutImages,
+      img: workoutImage1,
       link:"https://www.youtube.com/watch?v=UItWltVZZmE"
     },
     {
       title: "Training 2",
-      img: workoutImages,
+      img: workoutImage2,
       link:"https://www.youtube.com/watch?v=g_tea8ZNk5A"
     },
     {
       title: "Training 3",
-      img: workoutImages,
+      img: workoutImage3,
       link:"https://www.youtube.com/watch?v=8DZktowZo_k"
     },
     {
       title: "Training 4",
-      img: workoutImages,
+      img: workoutImage4,
       link:"https://www.youtube.com/watch?v=GLy2rYHwUqY"
     }
   ]);
