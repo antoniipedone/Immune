@@ -11,7 +11,7 @@ import ContactDoctor from '../Pages/ContactDoctor';
 const Pages = props =>{
     return(
         <Fragment>
-            <Navigation />
+            <Navigation logout={props.logout} />
             <Route path='/calendar'>
                 <Calendar user={props.user} />
             </Route>
