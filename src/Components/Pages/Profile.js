@@ -1,10 +1,9 @@
-const Profile = props => {
-    // update
+const Profile = props => {    
     return(
         <div>
             <h1>Profile</h1>
             <div className="profile profile--header">
-                <img className="profile__img" src="https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png" />
+                <img className="profile__img" src={props.user.img} />
                 <h3 className="profile__name">{props.user.name} {props.user.surname}</h3>
                 <p className="profile__text">Gender: {props.user.gender}</p>
                 <p className="profile__text">Date of bird: {props.user.birth}</p>
@@ -27,5 +26,5 @@ const Profile = props => {
         
     );
 }
-
+// https://widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4-300x300.png
 export default Profile;
