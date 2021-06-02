@@ -7,6 +7,9 @@ const Calendar = props => {
 
     const [sort, setSort] = useState(true);
 /*
+
+    //// USE FILTER METHOD ///
+
     let appointments = props.calendar.map( (appointment, id) =>{
         let now = new Date();
         let sorting;
@@ -31,9 +34,9 @@ const Calendar = props => {
                         <li className="calendar__switch__element--active" >Upcoming</li>
                         <li className="calendar__switch__element" >Past</li>
                     </ul>
-                    <span>
-                        <p> date </p>
-                        <p> appointment name </p>
+                    <span className="calendar__oppointment">
+                        <p className="calendar__oppointment__date"> date </p>
+                        <p className="calendar__oppointment__name"> appointment name </p>
                     </span>
                 </div>
             </div>
