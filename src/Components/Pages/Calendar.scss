@@ -1,0 +1,42 @@
+.DayPicker{
+    margin: 2rem auto;
+    display: block;
+    width: fit-content;
+    background: white;
+    border-radius: 1rem;
+    &-Day{
+        &--today{
+            background: rgba($color: #7C37FA, $alpha: .1);
+            color: #7C37FA;
+            border-radius: .5rem;
+        }
+    }
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.1); 
+}
+
+.calendar{
+    &__switch{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid lightgrey;
+        list-style: none;
+        &__element{
+            padding: 1rem 0;
+            &--active{
+                color: #2A2AC0;
+                border-bottom: 2px solid #2A2AC0;
+            }
+        }
+    }
+    &__appointment{
+        padding: 1.2rem 0;
+        border-bottom: 1px solid lightgrey;
+        &__date{
+            color: #1C1C1C;
+            font-size: 1.2rem;
+            margin-bottom: .2rem;
+        }
+    }
+}

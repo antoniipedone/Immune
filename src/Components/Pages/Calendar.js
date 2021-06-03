@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import DayPicker from 'react-day-picker'; // https://react-day-picker.js.org/
 
-import 'react-day-picker/lib/style.css';
 
 const Calendar = props => {
 
@@ -31,13 +30,13 @@ const Calendar = props => {
                      selectedDays />
                 <div>
                     <ul className="calendar__switch">
-                        <li className="calendar__switch__element--active" >Upcoming</li>
+                        <li className="calendar__switch__element calendar__switch__element--active" >Upcoming</li>
                         <li className="calendar__switch__element" >Past</li>
                     </ul>
-                    <span className="calendar__oppointment">
-                        <p className="calendar__oppointment__date"> date </p>
-                        <p className="calendar__oppointment__name"> appointment name </p>
-                    </span>
+                    <div className="calendar__appointment">
+                        <p className="calendar__appointment__date"> date </p>
+                        <p className="calendar__appointment__name"> appointment name </p>
+                    </div>
                 </div>
             </div>
         </div>
