@@ -1,0 +1,59 @@
+.receipt {
+    &__button{
+        position: relative;
+        &::after{
+            content: '⌃';
+            color: #2a2ac0;
+            font-weight: bold;
+            font-size: 2rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+    
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid lightgrey;
+        list-style: none;
+        &__element {
+            padding: 1rem 0;
+            &--active {
+                color: #2a2ac0;
+                border-bottom: 2px solid #2a2ac0;
+            }
+        }
+    }
+
+    padding: 1.2rem 0;
+    border-bottom: 1px solid lightgrey;
+    &__date {
+        color: #1c1c1c;
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+    }
+    &__info {
+        margin-top: 1rem;
+        display: none;
+    }
+
+    &.active{
+        & .receipt__button{
+            &::after{
+                transform: rotate(180deg);
+            }
+        }
+        
+        & .receipt__info{
+            display: block;
+        }
+    }
+}
+
+.searchBar {
+    margin: 2rem 0;
+}

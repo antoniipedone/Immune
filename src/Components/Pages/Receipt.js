@@ -12,27 +12,29 @@ const Receipt = props => {
     return(
         <div>
             <h1>Receipt for {props.user.name}</h1>
-            <input className="searchBar" type="text" value={search} onChange={searchHandler}/>
-            <ul>
-                <li>
+            <input className="searchBar" type="text" placeholder={search} onChange={searchHandler}/>
+            <ul className="receipt__header">
+                <li className="receipt__header__element calendar__switch__element--active">
                     <p>Primo</p>
                 </li>
-                <li>
-                    <p>secondo</p>
+                <li className="receipt__header__element">
+                    <p>Secondo</p>
                 </li>
-                <li>
+                <li className="receipt__header__element">
                     <p>Contorno</p>
                 </li>
             </ul>
             {props.receipt.map( (meal, id) =>{
                 // some logic for => primo - secondo - contorno
                 return(
-                    <span key={id} >
-                        <p>{meal.date.toLocaleDateString()}</p>
-                        <p>{meal.name}</p>
-                        <span>+</span>
-                        <p>{meal.information}</p>
-                    </span>
+                    <div className="receipt" key={id} >
+                        <div className="receipt__button">
+                            <p className="receipt__date">{meal.date.toLocaleDateString()}</p>
+                            <h4 className="receipt__name">{meal.name}</h4>
+                        </div>
+                        
+                        <p className="receipt__info">{meal.information}</p>
+                    </div>
                 )
             } )}            
         </div>
