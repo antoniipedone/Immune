@@ -3,7 +3,7 @@ const Profile = props => {
         <div>
             <h1>Profile</h1>
             <div className="profile profile--header">
-                <img className="profile__img" src={props.user.img} />
+                <img className="profile__img" src={props.user.img} alt="profile img"/>
                 <h3 className="profile__name">{props.user.name} {props.user.surname}</h3>
                 <p className="profile__text">Gender: {props.user.gender}</p>
                 <p className="profile__text">Date of bird: {props.user.birth}</p>

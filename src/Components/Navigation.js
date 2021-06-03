@@ -10,22 +10,22 @@ const Navigation = props =>{
         <nav>
             <ul className="menu">
                 <li className="menu__item">
-                    <NavLink activeClassName={'menu__item__link'} to='/calendar'><img src={calendario}></img></NavLink>
+                    <NavLink activeClassName={'menu__item__link'} to='/calendar'><img src={calendario} alt="calendario button" /></NavLink>
                 </li>
                 <li className="menu__item">
-                    <NavLink activeClassName={'menu__item__link'} to='/workout'><img src={workout}></img></NavLink>
+                    <NavLink activeClassName={'menu__item__link'} to='/workout'><img src={workout} alt="workout button" /></NavLink>
                 </li>
                 <li className="menu__item">
-                    <NavLink activeClassName={'menu__item__link'} to='/profile'><img src={account}></img></NavLink>
+                    <NavLink activeClassName={'menu__item__link'} to='/profile'><img src={account} alt="profile button" /></NavLink>
                 </li>
                 <li className="menu__item">
-                    <NavLink activeClassName={'menu__item__link'} to='/contactdoctor'><img src={contact}></img></NavLink>
+                    <NavLink activeClassName={'menu__item__link'} to='/contactdoctor'><img src={contact} alt="contact doctor button" /></NavLink>
                 </li>
                 <li className="menu__item">
-                    <NavLink activeClassName={'menu__item__link'} to='/receipt'><img src={ricette}></img></NavLink>
+                    <NavLink activeClassName={'menu__item__link'} to='/receipt'><img src={ricette} alt="receipt button" /></NavLink>
                 </li>
                 <li className="menu__item">
-                    <a href="#" onClick={props.logout}><img src={logout} /></a>
+                    <a href="#" onClick={props.logout}><img src={logout} alt="log out button" /></a>
                 </li>
             </ul>
         </nav>

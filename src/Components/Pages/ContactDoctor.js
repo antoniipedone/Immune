@@ -1,4 +1,4 @@
-const ContactDoctor = props => {
+const ContactDoctor = () => {
     return(
         <div>
             <h1>Contact doctor</h1>
@@ -19,4 +19,4 @@ const ContactDoctor = props => {
         );
 }
 
-export default ContactDoctor;          ;
+export default ContactDoctor;
