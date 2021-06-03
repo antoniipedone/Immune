@@ -121,6 +121,20 @@ const App = () => {
       pathologies: [
         "Lupus Erythematosus" ,
         "Diabetes Type 1" 
+      ],
+      appointments:[
+        {
+          title:"Visita 1",
+          date: new Date(2021,6,11)
+        },
+        {
+          title:"Visita 2",
+          date: new Date(2021,6,18)
+        },
+        {
+          title:"Visita 2",
+          date: new Date(2021,6,30)
+        }
       ]
     }    
   }; 
