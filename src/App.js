@@ -177,7 +177,7 @@ const App = () => {
   };
 
   const logoutHandler = () =>{
-    alert("LogOut");
+    alert(`${allineamento.name} has log out`);
     setAllineamento({
       name: null,
       gender: null,
