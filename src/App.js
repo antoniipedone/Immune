@@ -176,7 +176,7 @@ const App = () => {
     }
   };
 
-  const logoutHabdler = () =>{
+  const logoutHandler = () =>{
     alert("LogOut");
     setAllineamento({
       name: null,
@@ -199,7 +199,7 @@ const App = () => {
         <Route path='/' exact>
           <Login onAuth={onAuthHandler} />
         </Route>
-        {(allineamento.isAuth) ? <Pages user={allineamento} workout={videoLession} receipt={receipt} logout={logoutHabdler} /> : <Route><h1>Not logged</h1></Route>}
+        {(allineamento.isAuth) ? <Pages user={allineamento} workout={videoLession} receipt={receipt} logout={logoutHandler} /> : <Route><h1>Not logged</h1></Route>}
       </Switch>
     </div>
   );
