@@ -1,0 +1,51 @@
+.doctor{
+    &__header{
+        display: flex;
+        gap: 2rem;
+        padding: 2rem 0 3rem 0;
+        &--info{
+            font-size: 1.2rem;
+            color: #1C1C1C;
+        }
+        border-bottom: 1px solid lightgrey;
+        margin-bottom: 3rem;
+    }
+    &__img{
+        border-radius: 2rem;
+        height: 15rem;
+        width: 15rem;
+        object-fit: cover;
+    }
+    &__spec{
+        margin-bottom: 1rem;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        & textarea{
+            width: 100%;
+            border-radius: .7rem;
+            border: none;
+            padding: 1.2rem 1rem;
+            font-family: 'Inter';
+            font-size: 1.6rem;
+            background-color: rgba($color: white, $alpha: .6); 
+            -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.1);
+            -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.1);
+            box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.1); 
+            min-height: 15rem;   
+            margin-bottom: 3rem;  
+        }
+        &__submit{
+            width: 100%;
+            border-radius: .7rem;
+            border: none;
+            height: 5rem;
+            padding: 1.6rem .6rem;
+            font-family: 'Inter';
+            background-color: rgba($color: #2A2AC0, $alpha: 1);
+            color: white; 
+            font-weight: bold;
+        }
+    }
+}
