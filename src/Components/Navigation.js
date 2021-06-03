@@ -4,6 +4,7 @@ import ricette from '../Assets/imgs/icons/ricette.svg';
 import contact from '../Assets/imgs/icons/contact.svg';
 import calendario from '../Assets/imgs/icons/calendario.svg';
 import workout from '../Assets/imgs/icons/workout.svg'
+import logout from '../Assets/imgs/icons/logout.svg'
 const Navigation = props =>{
     return(
         <nav>
@@ -24,7 +25,7 @@ const Navigation = props =>{
                     <NavLink activeClassName={'menu__item__link'} to='/receipt'><img src={ricette}></img></NavLink>
                 </li>
                 <li className="menu__item">
-                    <a href="" className="menu__item__link" onClick={props.logout}><img src={account} /></a>
+                    <a href="#" onClick={props.logout}><img src={logout} /></a>
                 </li>
             </ul>
         </nav>
