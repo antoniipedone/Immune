@@ -66,3 +66,7 @@ input{
     font-size: 1.6rem;
     background-color: rgba($color: white, $alpha: .6);       
 }
+
+textarea{
+    resize: vertical;
+}
