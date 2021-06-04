@@ -25,7 +25,7 @@ const Navigation = props =>{
                     <NavLink activeClassName={'menu__item__link'} to='/receipt'><img src={ricette} alt="receipt button" /></NavLink>
                 </li>
                 <li className="menu__item">
-                    <a href="#" onClick={props.logout}><img src={logout} alt="log out button" /></a>
+                    <button type="button" onClick={props.logout}><img src={logout} alt="log out button" /></button>
                 </li>
             </ul>
         </nav>

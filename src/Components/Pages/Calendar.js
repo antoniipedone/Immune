@@ -1,10 +1,10 @@
-import { useState } from 'react';
+//import { useState } from 'react';
 import DayPicker from 'react-day-picker'; // https://react-day-picker.js.org/
 
 
 const Calendar = props => {
 
-    const [sort, setSort] = useState(true);
+  //  const [sort, setSort] = useState(true);
 /*
 
     //// USE FILTER METHOD ///

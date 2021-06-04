@@ -23,7 +23,7 @@ const Login = (props) =>{
 
 
     return(
-          <div class="login__container">
+          <div className="login__container">
             <div className="login__welcome">
               <h3>Welcome</h3>
               <p>Sign in to continue</p>
