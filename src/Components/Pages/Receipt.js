@@ -1,18 +1,20 @@
 import { useState } from "react";
-import ReactSimpleOptionsSelector from "react-simple-options-selector"; // https://github.com/ankithkonda/react-simple-options-selector
+import Select from 'react-select';
+
 
 const Receipt = props => {
 
     
-    const [search, setSearch] = useState("Search");
+    const [list, setList] = useState([]);
     
     const receiptList = [
         {
             name: "Creamy Beef & Noodles",
             img: "",
-            tag: "",
-            prep: "20",
-            coock: "45",
+            value: "Beef",
+            label: "Beef",
+            prep: 20,
+            coock: 45,
             serves: "1",
             type: "glutenfree",
             ingredients: [
@@ -40,7 +42,8 @@ const Receipt = props => {
         {
             name: "Carrot Cake Bars",
             img: "",
-            tag: "Carrot",
+            value: "Carrot",
+            label: "Carrot",
             prep: "",
             coock: "",
             serves: "8",
@@ -79,9 +82,10 @@ const Receipt = props => {
         {
             name: "Suppli",
             img: "",
-            tag: "Rice",
-            prep: "45",
-            coock: "15",
+            value: "Rice",
+            label: "Rice",
+            prep: 45,
+            coock: 15,
             serves: "4",
             type: "glutenfree",
             ingredients: [
@@ -106,7 +110,8 @@ const Receipt = props => {
         {
             name: "Roasted Broccoli",
             img: "",
-            tag: "broccoli",
+            value: "Broccoli",
+            label: "Broccoli",
             prep: "",
             coock: "",
             serves: "1",
@@ -127,7 +132,8 @@ const Receipt = props => {
         {
             name: "Cabbage with Onions and Apples",
             img: "",
-            tag: "Onions and Apples",
+            value: "Onions and Apples",
+            label: "Onions and Apples",
             prep: "",
             coock: "",
             serves: "1",
@@ -151,7 +157,8 @@ const Receipt = props => {
         {
             name: "Pan Roasted Pork Chops",
             img: "",
-            tag: "Pork",
+            value: "Pork",
+            label: "Pork",
             prep: "",
             coock: "",
             serves: "1",
@@ -180,9 +187,10 @@ const Receipt = props => {
         {
             name: "Asian Salmon Bowls",
             img: "",
-            tag: "Salmon",
-            prep: "20",
-            coock: "25",
+            value: "Salmon",
+            label: "Salmon",
+            prep: 20,
+            coock: 25,
             serves: "1",
             type: "sclerosis",
             ingredients: [
@@ -215,9 +223,10 @@ const Receipt = props => {
         {
             name: "Super Gyro Lamb Chops",
             img: "",
-            tag: "Lamb",
-            prep: "2",
-            coock: "12",
+            value: "Lamb",
+            label: "Lamb",
+            prep: 2,
+            coock: 12,
             serves: "2",
             type: "Super Gyro Lamb Chops",
             ingredients: [
@@ -236,9 +245,10 @@ const Receipt = props => {
         {
             name: "Oven Roasted Cauliflower",
             img: "",
-            tag: "Cauliflower",
-            prep: "5",
-            coock: "25",
+            value: "Cauliflower",
+            label: "Cauliflower",
+            prep: 5,
+            coock: 25,
             serves: "1",
             type: "sclerosis",
             ingredients: [ 
@@ -256,68 +266,32 @@ const Receipt = props => {
         },
 
     ];
-
-    const CustomOptions = [ //dinamic add of principar ingredients 
-        "Some",
-        "Other",
-        "Options",
-        "To",
-        "Select"
-    ];
+    
+    let receipts = (
+        list.map( (meal, id) =>{
+            return(
+                <div className="receipt" key={id} >
+                    <div className="receipt__button">
+                        <p className="receipt__date">{`Time ${meal.prep + meal.coock} min`}</p>
+                        <h4 className="receipt__name">{meal.name}</h4>
+                    </div>
+                    <p className="receipt__info">info</p>
+                </div>
+            )
+        } )
+    ); 
 
     const searchHandler = event =>{
-        setSearch(event.target.value);
+        setList(event); 
     };
-
-    const foodHandler = (name, selected) => {
-        console.log(selected);
-        // add selected on receipt filter
-    };
-
-    let receipts = props.receipt.map( (meal, id) =>{
-        // some logic for => primo - secondo - contorno
-        return(
-            <div className="receipt" key={id} >
-                <div className="receipt__button">
-                    <p className="receipt__date">{meal.date.toLocaleDateString()}</p>
-                    <h4 className="receipt__name">{meal.name}</h4>
-                </div>
-                <p className="receipt__info">{meal.information}</p>
-            </div>
-        )
-    } );     
 
     return(
         <div>
-            <h1>Receipt for {props.user.name}</h1>
-            <input className="searchBar" type="text" placeholder={search} onChange={searchHandler}/>
-            <ReactSimpleOptionsSelector 
-            	name="ingredients filter"
-                type="checkbox"
-                onSelectionChange={foodHandler}
-	            options={
-	            	CustomOptions.map((value, index)=>{
-	            		return {
-	            			id:value,
-	            			label:value,
-	            			selected:(index === 2) ? true:false        
-	            		}
-	            	})
-	            }
-
-            />
-
-                {/* <ul className="receipt__header">
-                <li className="receipt__header__element calendar__switch__element--active">
-                    <p>Primo</p>
-                </li>
-                <li className="receipt__header__element">
-                    <p>Secondo</p>
-                </li>
-                <li className="receipt__header__element">
-                    <p>Contorno</p>
-                </li>
-                </ul> */}
+                        
+            <Select
+                options={receiptList}
+                isMulti 
+                onChange={value => searchHandler(value)} />
             
             {receipts}     
         </div>
