@@ -44,8 +44,18 @@
         }
         &--ingredients, &--process, &--heading{
             margin-bottom: 2rem;
-            & ul, ol{
+            & h4{
+                margin-bottom: 1rem;
+            }
+            & ul{
                 list-style: none;
+            }
+            & ol{
+                // list-style: none;
+                list-style-position: inside;
+                & li:not(:last-child){
+                    margin-bottom: 1rem;
+                }
             }
         }
         &--heading{
