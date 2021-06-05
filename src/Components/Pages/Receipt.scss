@@ -37,8 +37,23 @@
         margin-bottom: 0.2rem;
     }
     &__info {
-        margin-top: 1rem;
+        // margin-top: 1rem;
         display: none;
+        & img, iframe{
+            margin: 2rem 0;
+        }
+        &--ingredients, &--process, &--heading{
+            margin-bottom: 2rem;
+            & ul, ol{
+                list-style: none;
+            }
+        }
+        &--heading{
+            background: rgba($color: #2A2AC0, $alpha: 1);
+            padding: 1rem;
+            color: white;
+            border-radius: 1rem;
+        }
     }
 
     &.active{
