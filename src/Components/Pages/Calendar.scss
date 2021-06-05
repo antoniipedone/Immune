@@ -4,11 +4,21 @@
     width: fit-content;
     background: white;
     border-radius: 1rem;
+    &-Month{
+        border-spacing: .25rem;
+        border-collapse: separate;
+    }
     &-Day{
         &--today{
             background: rgba($color: #7C37FA, $alpha: .1);
             color: #7C37FA;
             border-radius: .5rem;
+        }
+        &--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside){
+            background-color: rgba($color: #2A2AC0, $alpha: 1);
+            color: white;
+            border-radius: .5rem;
+            margin: 2rem;
         }
     }
     -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.1);
