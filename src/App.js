@@ -343,15 +343,15 @@ const App = () => {
       appointments:[
         {
           title:"Visita 1",
-          date: new Date(2021,6,11)
+          date: new Date(2021,5,11)
         },
         {
           title:"Visita 2",
-          date: new Date(2021,6,18)
+          date: new Date(2021,5,18)
         },
         {
           title:"Visita 2",
-          date: new Date(2021,6,30)
+          date: new Date(2021,5,30)
         }
       ]
     },
@@ -373,15 +373,15 @@ const App = () => {
       appointments:[
         {
           title:"Visita 1",
-          date: new Date(2021,6,11)
+          date: new Date(2021,5,11)
         },
         {
           title:"Visita 2",
-          date: new Date(2021,6,18)
+          date: new Date(2021,5,18)
         },
         {
           title:"Visita 2",
-          date: new Date(2021,6,30)
+          date: new Date(2021,5,30)
         }
       ]
     }    
