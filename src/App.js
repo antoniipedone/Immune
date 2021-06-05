@@ -12,7 +12,15 @@ import workoutImage4 from './Assets/imgs/workout/workout4.svg';
 
 import profileImage1 from './Assets/imgs/profile/free-profile-photo-whatsapp-4.png';
 
-
+import receipt1 from './Assets/imgs/receipts/Creamy-Ranch-Beef-Noodles.png';
+import receipt2 from './Assets/imgs/receipts/b2e64434-a939-48a7-805f-4dfaad7f41c2.jpg';
+import receipt3 from './Assets/imgs/receipts/4a3491d5-e789-41c5-a437-f2d1d617e7af.jpg';
+import receipt4 from './Assets/imgs/receipts/a25e6e63-43af-4107-850b-efa3bcb525f9.jpg';
+import receipt5 from './Assets/imgs/receipts/4466ddb8-f5a4-4bd9-bdb7-e8cf6490aba5.jpg';
+import receipt6 from './Assets/imgs/receipts/1808af29-e373-4d38-8a80-99481adc3712.jpg';
+import receipt7 from './Assets/imgs/receipts/742fa242-44fd-46cb-817f-dd9c8558aed6.jpg';
+import receipt8 from './Assets/imgs/receipts/5db23370-c470-4467-ba2b-d917819dbc91.jpg';
+import receipt9 from './Assets/imgs/receipts/bf50b6e2-e732-4677-a8f1-4eec7c6c2951.jpg';
 
 
 const App = () => {
@@ -58,13 +66,13 @@ const App = () => {
   const receipt =  [
     {
         name: "Creamy Beef & Noodles",
-        img: "",
         value: "Beef",
         label: "Beef",
         prep: 20,
         coock: 45,
         serves: "1",
         type: "Gluten free",
+        img: receipt1,
         ingredients: [
             "1/4 lb Ground Beef",
             "3/16 cup Onion, diced",
@@ -89,13 +97,13 @@ const App = () => {
     },
     {
         name: "Carrot Cake Bars",
-        img: "",
         value: "Carrot",
         label: "Carrot",
-        prep: "",
-        coock: "",
+        prep: 10,
+        coock: 15,
         serves: "8",
         type: "Gluten free",
+        img: receipt2,
         ingredients: [
             "1/2 cup,Cassava Flour",
             "1/2 cup,Blanched Almond Flour",
@@ -129,13 +137,13 @@ const App = () => {
     },
     {
         name: "Suppli",
-        img: "",
         value: "Rice",
         label: "Rice",
         prep: 45,
         coock: 15,
         serves: "4",
         type: "Gluten free",
+        img: receipt3,
         ingredients: [
             '4 Tbsp Butter, Unsalted,divided',
             '1 1/2 cups Onion, chopped',
@@ -157,13 +165,13 @@ const App = () => {
     },
     {
         name: "Roasted Broccoli",
-        img: "",
         value: "Broccoli",
         label: "Broccoli",
-        prep: "",
-        coock: "",
+        prep: 3,
+        coock: 6,
         serves: "1",
         type: "Diabetes",
+        img: receipt4,
         ingredients: [
             '1/4 lb Broccoli, florets',
             '1/4 Tbsp Olive Oil, Extra Virgin',
@@ -179,13 +187,13 @@ const App = () => {
     },
     {
         name: "Cabbage with Onions and Apples",
-        img: "",
         value: "Onions and Apples",
         label: "Onions and Apples",
-        prep: "",
-        coock: "",
+        prep: 6,
+        coock: 12,
         serves: "1",
         type: "Diabetes",
+        img: receipt5,
         ingredients: [
             '1/4 head Green Cabbage, shredded',
             '1/2 Apple, Granny Smith, cored and thinly sliced',
@@ -204,13 +212,13 @@ const App = () => {
     },
     {
         name: "Pan Roasted Pork Chops",
-        img: "",
         value: "Pork",
         label: "Pork",
-        prep: "",
-        coock: "",
+        prep: 3,
+        coock: 15,
         serves: "1",
         type: "Diabetes",
+        img: receipt6,
         ingredients: [
             '3/4 lb Pork Chop, two chops, about 3/4 lb each, bone in.',
             '1/2 Tbsp Primal Palate Super Gyro Seasoning',
@@ -234,13 +242,13 @@ const App = () => {
     },
     {
         name: "Asian Salmon Bowls",
-        img: "",
         value: "Salmon",
         label: "Salmon",
         prep: 20,
         coock: 25,
         serves: "1",
         type: "Sclerosis",
+        img: receipt7,
         ingredients: [
             '1/2 cup Celery, chopped',
             'Salt and Pepper, to taste',
@@ -270,13 +278,13 @@ const App = () => {
     },
     {
         name: "Super Gyro Lamb Chops",
-        img: "",
         value: "Lamb",
         label: "Lamb",
         prep: 2,
         coock: 12,
         serves: "2",
         type: "Sclerosis",
+        img: receipt8,
         ingredients: [
             '1 lb Lamb Chops, rib chops or loin chops, 1 - 1.5" thick',
             '1/2 Tbsp Olive Oil, Extra Virgin',
@@ -292,13 +300,13 @@ const App = () => {
     },
     {
         name: "Oven Roasted Cauliflower",
-        img: "",
         value: "Cauliflower",
         label: "Cauliflower",
         prep: 5,
         coock: 25,
         serves: "1",
         type: "Sclerosis",
+        img: receipt9,
         ingredients: [ 
             '1 1/2 cups Cauliflower, 1 head, cut into florets',
             'Tbsp Olive Oil, Extra Virgin',
@@ -331,6 +339,20 @@ const App = () => {
       pathologies: [
         "Gluten free",
         "Sclerosis" 
+      ],
+      appointments:[
+        {
+          title:"Visita 1",
+          date: new Date(2021,6,11)
+        },
+        {
+          title:"Visita 2",
+          date: new Date(2021,6,18)
+        },
+        {
+          title:"Visita 2",
+          date: new Date(2021,6,30)
+        }
       ]
     },
     1: {

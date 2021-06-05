@@ -5,18 +5,17 @@ import SingleReceipt from '../singleReceipt';
 
 const Receipt = props => {
 
-    const [list, setList] = useState([]);
+    const receipts = props.receipt.filter(x => props.user.pathologies.includes(x.type));
+    
+    const [list, setList] = useState(receipts);
      
-    const searchHandler = event =>{
-        setList(event); 
-    };
-
     return(
         <div>   
             <Select
-                options={props.receipt.filter(x => props.user.pathologies.includes(x.type))}
+                options={receipts}
+                defaultValue={receipts}
                 isMulti 
-                onChange={value => searchHandler(value)} />
+                onChange={value => setList(value)} />
             <SingleReceipt list={list} />
         </div>  
     );
