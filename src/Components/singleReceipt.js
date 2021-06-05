@@ -15,9 +15,9 @@ const SingleReceipt = props => {
                     <div className="receipt__info" >
                         <img src={meal.img} alt={meal.name} />
                         <div className="receipt__info--heading">
-                            <p><span class="bold">Serves: </span> {meal.serves} </p>
-                            <p><span class="bold">Preparation: </span> {meal.prep} min.</p>
-                            <p><span class="bold">Cook: </span>{meal.cook} min.</p>
+                            <p><span className="bold">Serves: </span> {meal.serves} </p>
+                            <p><span className="bold">Preparation: </span> {meal.prep} min.</p>
+                            <p><span className="bold">Cook: </span>{meal.cook} min.</p>
                         </div>
                         <div className="receipt__info--ingredients">
                             <h4>Ingredients:</h4>
