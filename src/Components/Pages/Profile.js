@@ -5,7 +5,7 @@ const Profile = props => {
     const clicked = info => {
         props.clicked(info);
     }    
-
+    console.log(props.modal);
     return(
         <div>
             <h1>Profile</h1>
@@ -29,10 +29,8 @@ const Profile = props => {
                     <p  className="profile__text">Postcode: {props.user.postcode}</p>
                 </div>
                 <Modal show={props.show} clicked={props.clicked}>
-                    <h1>Pathologies</h1>
-                    <p>Description</p>
-                    {/* <h2>{props.modal.type}</h2>
-                    <p>{props.modal.description}</p> */}    
+                    <h2>{props.modal.type}</h2>
+                    <p>{props.modal.description}</p>   
                 </Modal>
             </div>
         </div>

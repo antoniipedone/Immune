@@ -41,7 +41,10 @@ const App = () => {
   });
 
   const [show, setShow] = useState(false);
-  const [modal, setModal] = useState();
+  const [modal, setModal] = useState({
+    type:"Type",
+    description:"Description"
+  });
 
 
   const videoLession = [
@@ -477,16 +480,12 @@ const App = () => {
   }
 
   const closeModalHandler = data => {
-    setShow(prevState => !prevState);
-    /*(show) && setModal(data);
-    if (show){
-      console.log(data);
-      let type = new String(data);
-      let modalinfo = pathologies.filter(x => x.type === type);
-      //setModal({...modalinfo});
-      console.log(modalinfo);
+    setShow(prevState => !prevState);  
+    if (!show){
+      let modalinfo = pathologies.filter(x => x.type === data);
+      setModal(...modalinfo);
     }
-    */
+    console.log(modal);
   } 
 
   return (
