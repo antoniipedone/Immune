@@ -51,28 +51,28 @@ const App = () => {
     {
       title: "Training 1",
       img: workoutImage1,
-      link:"https://www.youtube.com/watch?v=UItWltVZZmE"
+      link:"https://www.youtube.com/watch?v=eWNO1IKuedQ"
     },
     {
       title: "Training 2",
       img: workoutImage2,
-      link:"https://www.youtube.com/watch?v=g_tea8ZNk5A"
+      link:"https://www.youtube.com/watch?v=GXScsjMrZcI"
     },
     {
       title: "Training 3",
       img: workoutImage3,
-      link:"https://www.youtube.com/watch?v=8DZktowZo_k"
+      link:"https://www.youtube.com/watch?v=Ae3uVLbdffk"
     },
     {
       title: "Training 4",
       img: workoutImage4,
-      link:"https://www.youtube.com/watch?v=GLy2rYHwUqY"
+      link:"https://www.youtube.com/watch?v=Io1tAcojafY"
     }
   ];
 
   const pathologies = [
     {
-      type:"Sclerosis",
+      type:"Multiple Sclerosis",
       description:`Multiple sclerosis (MS) is a condition that can affect the brain and spinal cord, causing a wide range of potential symptoms, including problems with vision, arm or leg movement, sensation or balance.
       It's a lifelong condition that can sometimes cause serious disability, although it can occasionally be mild.
       In many cases, it's possible to treat symptoms. Average life expectancy is slightly reduced for people with MS.
@@ -290,7 +290,7 @@ const App = () => {
         prep: 20,
         cook: 25,
         serves: "1",
-        type: "Sclerosis",
+        type: "Multiple Sclerosis",
         img: receipt7,
         ingredients: [
             '1/2 cup Celery, chopped',
@@ -326,7 +326,7 @@ const App = () => {
         prep: 2,
         cook: 12,
         serves: "2",
-        type: "Sclerosis",
+        type: "Multiple Sclerosis",
         img: receipt8,
         ingredients: [
             '1 lb Lamb Chops, rib chops or loin chops, 1 - 1.5" thick',
@@ -348,7 +348,7 @@ const App = () => {
         prep: 5,
         cook: 25,
         serves: "1",
-        type: "Sclerosis",
+        type: "Multiple Sclerosis",
         img: receipt9,
         ingredients: [ 
             '1 1/2 cups Cauliflower, 1 head, cut into florets',
@@ -366,22 +366,21 @@ const App = () => {
 
 ];
 
-  const users = {
-    0: {
+  const users = [
+    {
       name: "Antonio",
-      surname: "Pezzella",
+      surname: "Rossi",
       gender: "Male",
-      birth: "01/05/1991",
+      birth: "01/05/1971",
       NHS_Number: 51515151,
       address: "Via Vittorio Veneto, 45",
-      town: "Grumo Nevano (Napoli)",
-      postcode: "80028",
-      email: "nikay360@hotmail.it" ,
-      mobile_number: "3277088590",
+      town: "Volla (Napoli)",
+      postcode: "80128",
+      email: "borsarossi@hotmail.it" ,
+      mobile_number: "3281468590",
       img: profileImage1,
       pathologies: [
-        "Coeliac Disease",
-        "Sclerosis" 
+        "Coeliac Disease"
       ],
       appointments:[
         {
@@ -398,9 +397,9 @@ const App = () => {
         }
       ]
     },
-    1: {
+    {
       name: "Francesca",
-      surname: "Pezzella",
+      surname: "Politano",
       gender: "Female",
       birth: "12/01/1988",
       NHS_Number: 51515451,
@@ -409,6 +408,36 @@ const App = () => {
       postcode: "80012",
       email: "nidda0@hotmail.it" ,
       mobile_number: "3245088590",
+      img: profileImage1,
+      pathologies: [
+        "Multiple Sclerosis" 
+      ],
+      appointments:[
+        {
+          title:"Visita 1",
+          date: new Date(2021,5,11)
+        },
+        {
+          title:"Visita 2",
+          date: new Date(2021,5,18)
+        },
+        {
+          title:"Visita 2",
+          date: new Date(2021,5,30)
+        }
+      ]
+    },
+    {
+      name: "Michela",
+      surname: "Colella",
+      gender: "Female",
+      birth: "22/07/1988",
+      NHS_Number: 51888451,
+      address: "Via Dei Mille, 44",
+      town: "Milano (Milano)",
+      postcode: "00010",
+      email: "colella@info.it" ,
+      mobile_number: "419958420",
       img: profileImage1,
       pathologies: [
         "Diabetes" 
@@ -428,7 +457,7 @@ const App = () => {
         }
       ]
     }    
-  }; 
+  ]; 
   
   useEffect(() => {
     setAllineamento({
@@ -481,11 +510,7 @@ const App = () => {
 
   const closeModalHandler = data => {
     setShow(prevState => !prevState);  
-    if (!show){
-      let modalinfo = pathologies.filter(x => x.type === data);
-      setModal(...modalinfo);
-    }
-    console.log(modal);
+    (!show) && setModal(...pathologies.filter(x => x.type === data));
   } 
 
   return (
