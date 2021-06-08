@@ -40,6 +40,10 @@ const App = () => {
     isAuth: false
   });
 
+  const [show, setShow] = useState(false);
+  const [modal, setModal] = useState();
+
+
   const videoLession = [
     {
       title: "Training 1",
@@ -63,6 +67,42 @@ const App = () => {
     }
   ];
 
+  const pathologies = [
+    {
+      type:"Sclerosis",
+      description:`Multiple sclerosis (MS) is a condition that can affect the brain and spinal cord, causing a wide range of potential symptoms, including problems with vision, arm or leg movement, sensation or balance.
+      It's a lifelong condition that can sometimes cause serious disability, although it can occasionally be mild.
+      In many cases, it's possible to treat symptoms. Average life expectancy is slightly reduced for people with MS.
+      It's most commonly diagnosed in people in their 20s and 30s, although it can develop at any age. It's about 2 to 3 times more common in women than men.`
+    },
+    {
+      type:"Coeliac Disease",
+      description:`Coeliac disease is a condition where your immune system attacks your own tissues when you eat gluten. This damages your gut (small intestine) so you are unable to take in nutrients.
+      Coeliac disease can cause a range of symptoms, including diarrhoea, abdominal pain and bloating.
+      Coeliac disease is caused by an adverse reaction to gluten, which is a dietary protein found in 3 types of cereal:
+      wheat
+      barley
+      rye
+      Gluten is found in any food that contains those cereals, including:
+      pasta
+      cakes
+      breakfast cereals
+      most types of bread
+      certain types of sauces
+      some ready meals
+      In addition, most beers are made from barley.`
+    },
+    {
+      type:"Diabetes",
+      description:`Diabetes is a lifelong condition that causes a person's blood sugar level to become too high.
+      There are 2 main types of diabetes:
+      type 1 diabetes – where the body's immune system attacks and destroys the cells that produce insulin
+      type 2 diabetes – where the body does not produce enough insulin, or the body's cells do not react to insulin
+      Type 2 diabetes is far more common than type 1. In the UK, around 90% of all adults with diabetes have type 2.
+      During pregnancy, some women have such high levels of blood glucose that their body is unable to produce enough insulin to absorb it all. This is known as gestational diabetes.`
+    }
+  ]
+
   const receipt =  [
     {
         name: "Creamy Beef & Noodles",
@@ -71,7 +111,7 @@ const App = () => {
         prep: 20,
         cook: 45,
         serves: "1",
-        type: "Gluten free",
+        type: "Coeliac Disease",
         img: receipt1,
         ingredients: [
             "1/4 lb Ground Beef",
@@ -102,7 +142,7 @@ const App = () => {
         prep: 10,
         cook: 15,
         serves: "8",
-        type: "Gluten free",
+        type: "Coeliac Disease",
         img: receipt2,
         ingredients: [
             "1/2 cup,Cassava Flour",
@@ -142,7 +182,7 @@ const App = () => {
         prep: 45,
         cook: 15,
         serves: "4",
-        type: "Gluten free",
+        type: "Coeliac Disease",
         img: receipt3,
         ingredients: [
             '4 Tbsp Butter, Unsalted,divided',
@@ -337,7 +377,7 @@ const App = () => {
       mobile_number: "3277088590",
       img: profileImage1,
       pathologies: [
-        "Gluten free",
+        "Coeliac Disease",
         "Sclerosis" 
       ],
       appointments:[
@@ -436,13 +476,26 @@ const App = () => {
     history.push('/');
   }
 
+  const closeModalHandler = data => {
+    setShow(prevState => !prevState);
+    /*(show) && setModal(data);
+    if (show){
+      console.log(data);
+      let type = new String(data);
+      let modalinfo = pathologies.filter(x => x.type === type);
+      //setModal({...modalinfo});
+      console.log(modalinfo);
+    }
+    */
+  } 
+
   return (
     <div className="container">
       <Switch>
         <Route path='/' exact>
           <Login onAuth={onAuthHandler} />
         </Route>
-        {(allineamento.isAuth) ? <Pages user={allineamento} workout={videoLession} receipt={receipt} logout={logoutHandler} /> : <Route><h1>Not logged</h1></Route>}
+        {(allineamento.isAuth) ? <Pages user={allineamento} workout={videoLession} receipt={receipt} logout={logoutHandler} show={show} clicked={closeModalHandler} modal={modal} /> : <Route><h1>Not logged</h1></Route>}
       </Switch>
     </div>
   );

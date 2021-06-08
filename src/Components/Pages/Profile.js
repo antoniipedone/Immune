@@ -1,4 +1,11 @@
-const Profile = props => {    
+import Modal from '../Modal/modal';
+
+const Profile = props => {
+    
+    const clicked = info => {
+        props.clicked(info);
+    }    
+
     return(
         <div>
             <h1>Profile</h1>
@@ -11,7 +18,7 @@ const Profile = props => {
             <div className = "profile">
                 <div className="profile__box">
                     <h3 className="profile__title">Pathologies</h3>
-                    {props.user.pathologies.map( (patologies, id) =>(<p className="profile__text" key={id}>{patologies}</p>))} 
+                    {props.user.pathologies.map( (patologies, id) =>(<p onClick={() => clicked(patologies)} className="profile__text" key={id}>{patologies}</p>))} 
                 </div>
                 <div className="profile__box">
                     <h3 className="profile__title">Other informations</h3>
@@ -21,6 +28,12 @@ const Profile = props => {
                     <p  className="profile__text">Town: {props.user.town}</p>
                     <p  className="profile__text">Postcode: {props.user.postcode}</p>
                 </div>
+                <Modal show={props.show} clicked={props.clicked}>
+                    <h1>Pathologies</h1>
+                    <p>Description</p>
+                    {/* <h2>{props.modal.type}</h2>
+                    <p>{props.modal.description}</p> */}    
+                </Modal>
             </div>
         </div>
         

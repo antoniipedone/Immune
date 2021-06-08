@@ -19,7 +19,7 @@ const Calendar = props => {
             <h1>Calendar</h1>
             <div className="calendar">
                 <DayPicker 
-                     selectedDays={props.user.appointments.flatMap(x => x.date)} />
+                     selectedDays={props.user.appointments.flatMap(x => new Date(x.date))} />
                 <div>
                     <ul className="calendar__switch">
                         <li className="calendar__switch__element calendar__switch__element--active" >Upcoming</li>

@@ -16,10 +16,10 @@ const Pages = props =>{
                 <Calendar user={props.user} />
             </Route>
             <Route path='/workout'>
-                <Workout user={props.user} lessions={props.workout} />
+                <Workout user={props.user} lessions={props.workout}/>
             </Route>
             <Route path='/profile'>
-                <Profile user={props.user} />
+                <Profile user={props.user} show={props.show} clicked={props.clicked} modal={props.modal} />
             </Route>
             <Route path='/contactdoctor'>
                 <ContactDoctor user={props.user} />
