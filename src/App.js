@@ -10,7 +10,9 @@ import workoutImage2 from './Assets/imgs/workout/workout2.svg';
 import workoutImage3 from './Assets/imgs/workout/workout3.svg';
 import workoutImage4 from './Assets/imgs/workout/workout4.svg';
 
-import profileImage1 from './Assets/imgs/profile/free-profile-photo-whatsapp-4.png';
+import profileImage1 from './Assets/imgs/profile/32.jpg';
+import profileImage2 from './Assets/imgs/profile/25.jpg';
+import profileImage3 from './Assets/imgs/profile/65.jpg';
 
 import receipt1 from './Assets/imgs/receipts/Creamy-Ranch-Beef-Noodles.png';
 import receipt2 from './Assets/imgs/receipts/b2e64434-a939-48a7-805f-4dfaad7f41c2.jpg';
@@ -27,7 +29,7 @@ const App = () => {
 
   const history = useHistory();
   
-  const [allineamento, setAllineamento] = useState({
+  const [datalog, setDatalog] = useState({
     name: null,
     gender: null,
     date_of_birth: null,
@@ -368,91 +370,91 @@ const App = () => {
 
   const users = [
     {
-      name: "Antonio",
-      surname: "Rossi",
+      name: "Mike",
+      surname: "Herrera",
       gender: "Male",
       birth: "01/05/1971",
       NHS_Number: 51515151,
-      address: "Via Vittorio Veneto, 45",
-      town: "Volla (Napoli)",
-      postcode: "80128",
-      email: "borsarossi@hotmail.it" ,
-      mobile_number: "3281468590",
+      address: "7461 Lakeview St",
+      town: "London",
+      postcode: "00021",
+      email: "mike.herrera@example.com" ,
+      mobile_number: "(454)-698-4776",
       img: profileImage1,
       pathologies: [
         "Coeliac Disease"
       ],
       appointments:[
         {
-          title:"Visita 1",
+          title:"Visit 1",
           date: new Date(2021,5,11)
         },
         {
-          title:"Visita 2",
+          title:"Visit 2",
           date: new Date(2021,5,18)
         },
         {
-          title:"Visita 2",
+          title:"Visit 3",
           date: new Date(2021,5,30)
         }
       ]
     },
     {
-      name: "Francesca",
-      surname: "Politano",
+      name: "Julie",
+      surname: "Gregory",
       gender: "Female",
       birth: "12/01/1988",
       NHS_Number: 51515451,
-      address: "Via Frezza, 4",
-      town: "Miano (Napoli)",
+      address: "8840 Country Club Rd",
+      town: "Manchester",
       postcode: "80012",
-      email: "nidda0@hotmail.it" ,
-      mobile_number: "3245088590",
-      img: profileImage1,
+      email: "julie.gregory@example.com" ,
+      mobile_number: "(851)-776-0492",
+      img: profileImage2,
       pathologies: [
         "Multiple Sclerosis" 
       ],
       appointments:[
         {
-          title:"Visita 1",
+          title:"Visit 1",
           date: new Date(2021,5,11)
         },
         {
-          title:"Visita 2",
+          title:"Visit 2",
           date: new Date(2021,5,18)
         },
         {
-          title:"Visita 2",
+          title:"Visit 3",
           date: new Date(2021,5,30)
         }
       ]
     },
     {
-      name: "Michela",
-      surname: "Colella",
+      name: "Alicia",
+      surname: "Banks",
       gender: "Female",
       birth: "22/07/1988",
       NHS_Number: 51888451,
-      address: "Via Dei Mille, 44",
-      town: "Milano (Milano)",
+      address: "Photinia Ave",
+      town: "Liverpool",
       postcode: "00010",
-      email: "colella@info.it" ,
-      mobile_number: "419958420",
-      img: profileImage1,
+      email: "alicia.banks@example.com" ,
+      mobile_number: "(825)-883-6615",
+      img: profileImage3,
       pathologies: [
         "Diabetes" 
       ],
       appointments:[
         {
-          title:"Visita 1",
+          title:"visit 1",
           date: new Date(2021,5,11)
         },
         {
-          title:"Visita 2",
+          title:"Visit 2",
           date: new Date(2021,5,18)
         },
         {
-          title:"Visita 2",
+          title:"Visit 3",
           date: new Date(2021,5,30)
         }
       ]
@@ -460,7 +462,7 @@ const App = () => {
   ]; 
   
   useEffect(() => {
-    setAllineamento({
+    setDatalog({
       name: null,
       gender: null,
       date_of_birth: null,
@@ -481,7 +483,7 @@ const App = () => {
     };
     for ( let i in users) {
       if (auth.username === users[i].name ) {
-        setAllineamento({
+        setDatalog({
           ...users[i],
           isAuth: true
         });
@@ -492,8 +494,8 @@ const App = () => {
   };
 
   const logoutHandler = () =>{
-    alert(`${allineamento.name} has log out`);
-    setAllineamento({
+    alert(`${datalog.name} has log out`);
+    setDatalog({
       name: null,
       gender: null,
       date_of_birth: null,
@@ -519,7 +521,7 @@ const App = () => {
         <Route path='/' exact>
           <Login onAuth={onAuthHandler} />
         </Route>
-        {(allineamento.isAuth) ? <Pages user={allineamento} workout={videoLession} receipt={receipt} logout={logoutHandler} show={show} clicked={closeModalHandler} modal={modal} /> : <Route><h1>Not logged</h1></Route>}
+        {(datalog.isAuth) ? <Pages user={datalog} workout={videoLession} receipt={receipt} logout={logoutHandler} show={show} clicked={closeModalHandler} modal={modal} /> : <Route><h1>Not logged</h1></Route>}
       </Switch>
     </div>
   );

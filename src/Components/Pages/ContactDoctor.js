@@ -1,4 +1,11 @@
+import { useHistory } from 'react-router-dom';
+
 const ContactDoctor = () => {
+    const history = useHistory();
+    const submitHandler = () =>{
+        history.push('/contactdoctor');
+    }
+
     return(
         <div>
             <h1>Contact doctor</h1>
@@ -11,7 +18,7 @@ const ContactDoctor = () => {
                     <p className="doctor__address">Indirizzo</p>
                 </div>
             </div>
-            <form className="doctor__form">
+            <form className="doctor__form" onSubmit={submitHandler}>
                 <textarea  className="doctor__form__input" placeholder="Write your message here" />
                 <input type="submit" value="Send Message" className="doctor__form__submit" />
             </form>
