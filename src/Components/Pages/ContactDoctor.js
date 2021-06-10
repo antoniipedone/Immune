@@ -14,8 +14,8 @@ const ContactDoctor = () => {
                 <div className="doctor__header--info">
                     <h2 className="doctor__name">Doctor name</h2>
                     <p className="doctor__spec">Dentist</p>
-                    <p className="doctor__address">Indirizzo</p>
-                    <p className="doctor__address">Indirizzo</p>
+                    <p className="doctor__address">Address</p>
+                    <p className="doctor__address">Address</p>
                 </div>
             </div>
             <form className="doctor__form" onSubmit={submitHandler}>
