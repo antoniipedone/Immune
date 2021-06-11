@@ -38,7 +38,7 @@ const SingleReceipt = props => {
         } )
     );
 
-    return (props.list === undefined || props.list.length === 0) ? <p>Nothing selected</p> : receipts ;
+    return (props.list === undefined || props.list.length === 0) ? <p class="receipt__nothing">Nothing selected</p> : receipts ;
 }
 
 export default SingleReceipt;

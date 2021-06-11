@@ -24,4 +24,16 @@
         border-bottom: 1px solid lightgrey;
         padding: 1rem 0;
     }
+    &__tips{
+        margin-top: 2rem;
+        display: flex;
+        gap: 2rem;
+        // justify-content: space-between;
+        & > *{
+            background: #2a2ac0;
+            color: white;
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+    }
 }

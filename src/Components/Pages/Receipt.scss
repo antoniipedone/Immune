@@ -1,4 +1,7 @@
 .receipt {
+    &__nothing{
+        margin-top: 1rem;
+    }
     &__button{
         position: relative;
         &::after{

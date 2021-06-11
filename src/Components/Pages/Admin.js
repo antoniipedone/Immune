@@ -15,14 +15,17 @@ const Admin = () =>{
     return(
         <div>
             <h1>Latest messages</h1>
+            <br></br>
             <h3>Message:</h3>
             {(messages) && Object.values(messages).map((message, id) => {
                 return(
-                    <span key={id}>
+                    <div className="receipt">
+                    <div key={id}>
                         <h4>{message.user}</h4>
-                        <p>{message.date}</p>
+                        <p className="receipt__date">{message.date}</p>
                         <p>{message.message}</p>
-                    </span>                    
+                    </div>     
+                    </div>               
                 );
             })}
 

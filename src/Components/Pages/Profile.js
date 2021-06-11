@@ -34,11 +34,12 @@ const Profile = props => {
                     <p  className="profile__text">Town: {props.user.town}</p>
                     <p  className="profile__text">Postcode: {props.user.postcode}</p>
                 </div>
-                <div className="profile__box">
-                    <button onClick={weeklyHabdler} >weekly diet</button>
+                <div className="profile__tips">
+                    {props.user.pathologies.map( (patologies, id) =>(<p onClick={() => clicked(patologies)} className="profile__text" key={id}>More tips</p>))} 
+                    <button onClick={weeklyHabdler} >Weekly diet</button>
                 </div>
                 <Modal show={props.show} clicked={props.clicked} >
-                    <h2>{props.modal.type}</h2> 
+                    <h1>{props.modal.type}</h1> 
                     <p>{props.modal.description}</p>
                 </Modal>
                 <Modal show={weekly} clicked={weeklyHabdler}>
