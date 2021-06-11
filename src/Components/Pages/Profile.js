@@ -12,7 +12,6 @@ const Profile = props => {
         setWeekly(prevState => !prevState);
     }   
 
-    console.log(props.modal);
     return(
         <div>
             <h1>Profile</h1>

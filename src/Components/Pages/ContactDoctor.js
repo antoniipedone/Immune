@@ -1,9 +1,27 @@
-import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios';
 
-const ContactDoctor = () => {
-    const history = useHistory();
-    const submitHandler = () =>{
-        history.push('/contactdoctor');
+const ContactDoctor = props => {
+    
+    const[message, setMessage] = useState("");
+    
+    const onchangeHand = event =>{
+        console.log(event.target.value);
+        setMessage(event.target.value);
+    }
+    
+    const submitHandler = event =>{
+        const sender = {
+            user: props.user.name,
+            date: new Date(),
+            message: message
+        };
+        axios.post('https://immune-2fd1f-default-rtdb.europe-west1.firebasedatabase.app/doctorMessage.json', sender)
+        .then(response => {
+            alert("Message sent");
+        })
+        .catch(error => console.error(error));
+        event.preventDefault();
     }
 
     return(
@@ -19,7 +37,7 @@ const ContactDoctor = () => {
                 </div>
             </div>
             <form className="doctor__form" onSubmit={submitHandler}>
-                <textarea  className="doctor__form__input" placeholder="Write your message here" />
+                <textarea type="textarea" placeholder="Send a message to doctor." className="doctor__form__input" value={message} onChange={onchangeHand} />
                 <input type="submit" value="Send Message" className="doctor__form__submit" />
             </form>
         </div>
