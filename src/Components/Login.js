@@ -53,6 +53,7 @@ const Login = (props) =>{
               <input className="form__submit form__submit--NHS" type="submit" value=" " />
             </form>
             <div className="login__terms">
+              <p className="login__terms--doc">Are you a doctor? <a href="./admin">Click here</a></p>
               <p>By signing in, you accept our Terms and Conditions</p>
             </div>
           </div>
