@@ -13,7 +13,7 @@ const ContactDoctor = props => {
     const submitHandler = event =>{
         const sender = {
             user: props.user.name,
-            date: new Date(),
+            date: new Date().toString(),
             message: message
         };
         axios.post('https://immune-2fd1f-default-rtdb.europe-west1.firebasedatabase.app/doctorMessage.json', sender)

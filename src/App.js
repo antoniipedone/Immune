@@ -3,6 +3,7 @@ import { Route, Switch, useHistory } from 'react-router-dom';
 
 import './App.scss';
 import Login from './Components/Login';
+import Admin from './Components/Pages/Admin';
 import Pages from './Components/Pages/pages';
 
 import workoutImage1 from './Assets/imgs/workout/workout1.svg';
@@ -520,6 +521,9 @@ const App = () => {
       <Switch>
         <Route path='/' exact>
           <Login onAuth={onAuthHandler} />
+        </Route>
+        <Route path='/admin'>
+          <Admin />
         </Route>
         {(datalog.isAuth) ? <Pages user={datalog} workout={videoLession} receipt={receipt} logout={logoutHandler} show={show} clicked={closeModalHandler} modal={modal} /> : <Route><h1>Not logged</h1></Route>}
       </Switch>
