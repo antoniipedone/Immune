@@ -17,18 +17,19 @@ const Admin = () =>{
             <h1>Latest messages</h1>
             <br></br>
             <h3>Message:</h3>
-            {(messages) && Object.values(messages).map((message, id) => {
-                return(
-                    <div className="receipt">
-                    <div key={id}>
-                        <h4>{message.user}</h4>
-                        <p className="receipt__date">{message.date}</p>
-                        <p>{message.message}</p>
-                    </div>     
-                    </div>               
-                );
-            })}
-
+            <div class="messages">
+                {(messages) && Object.values(messages).map((message, id) => {
+                    return (
+                        <div className="receipt">
+                            <div key={id}>
+                                <h4>{message.user}</h4>
+                                <p className="receipt__date">{message.date}</p>
+                                <p>{message.message}</p>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }
