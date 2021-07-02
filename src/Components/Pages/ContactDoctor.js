@@ -5,11 +5,13 @@ const ContactDoctor = props => {
     
     const[message, setMessage] = useState("");
     
+    // Load the text of the input form
     const onchangeHand = event =>{
         console.log(event.target.value);
         setMessage(event.target.value);
     }
     
+    // Submit handler of form and send it to db
     const submitHandler = event =>{
         const sender = {
             user: props.user.name,

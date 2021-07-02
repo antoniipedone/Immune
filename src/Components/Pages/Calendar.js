@@ -1,8 +1,9 @@
-import DayPicker from 'react-day-picker'; // https://react-day-picker.js.org/
+import DayPicker from 'react-day-picker'; // https://react-day-picker.js.org/  <-- Documentation of Calendar component
 
 
 const Calendar = props => {
-
+    
+    // Load appointments by props of user logged and map it 
     let appointments = props.user.appointments.map( (appointment, id) =>{
 
         return(

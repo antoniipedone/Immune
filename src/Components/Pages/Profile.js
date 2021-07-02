@@ -3,11 +3,14 @@ import Modal from '../Modal/modal';
 
 const Profile = props => {
 
+    // Variable of modal weekly diet
     const[weekly, setWeekly] = useState(false);
     
-    const clicked = info => {
+    // Handler that send to app.js which pathologies info we neet to send on a modal
+    const clicked = info => {   
         props.clicked(info);
     }
+    // Handler that change the state og weekly diet
     const weeklyHabdler = () =>{
         setWeekly(prevState => !prevState);
     }   

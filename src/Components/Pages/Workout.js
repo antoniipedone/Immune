@@ -1,5 +1,6 @@
 import Card from '../card';
 
+// Load all lession on db and make a cards of it
 const Workout = props => {
     return(
         <div className="workout">

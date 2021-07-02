@@ -5,6 +5,7 @@ import './App.scss';
 import Login from './Components/Login';
 import Admin from './Components/Pages/Admin';
 import Pages from './Components/Pages/pages';
+import SplashScreen from './Components/SplashScreen/SplashScreen';
 
 import workoutImage1 from './Assets/imgs/workout/workout1.svg';
 import workoutImage2 from './Assets/imgs/workout/workout2.svg';
@@ -30,6 +31,7 @@ const App = () => {
 
   const history = useHistory();
   
+  // Data of user logged 
   const [datalog, setDatalog] = useState({
     name: null,
     gender: null,
@@ -43,13 +45,14 @@ const App = () => {
     isAuth: false
   });
 
+  // Modal variable handler
   const [show, setShow] = useState(false);
   const [modal, setModal] = useState({
     type:"Type",
     description:"Description"
   });
 
-
+// Data of Cards/Lessions
   const videoLession = [
     {
       title: "Training 1",
@@ -73,6 +76,7 @@ const App = () => {
     }
   ];
 
+// Type of pathologies and description
   const pathologies = [
     {
       type:"Multiple Sclerosis",
@@ -109,6 +113,7 @@ const App = () => {
     }
   ]
 
+// Database of receipts
   const receipt =  [
     {
         name: "Creamy Beef & Noodles",
@@ -369,6 +374,7 @@ const App = () => {
 
 ];
 
+// Database of users
   const users = [
     {
       name: "Mike",
@@ -477,6 +483,7 @@ const App = () => {
     });
   },[]);
 
+// LogIn logic
   const onAuthHandler = authData =>{
     const auth = {
       ...authData,
@@ -489,11 +496,11 @@ const App = () => {
           isAuth: true
         });
         history.push('/profile');
-      
       }
     }
   };
 
+// LogOut handler
   const logoutHandler = () =>{
     alert(`${datalog.name} has log out`);
     setDatalog({
@@ -511,6 +518,7 @@ const App = () => {
     history.push('/');
   }
 
+// Handler that change the state of modal
   const closeModalHandler = data => {
     setShow(prevState => !prevState);  
     (!show) && setModal(...pathologies.filter(x => x.type === data));
@@ -519,8 +527,10 @@ const App = () => {
   return (
     <div className="container">
       <Switch>
-        <Route path='/' exact>
-          <Login onAuth={onAuthHandler} />
+        <Route path='/' exact> 
+          <SplashScreen>
+            <Login onAuth={onAuthHandler} />
+          </SplashScreen>
         </Route>
         <Route path='/admin'>
           <Admin />

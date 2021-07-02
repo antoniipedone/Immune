@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import Backdrop from './Backdrop';
 
 const Modal = props => {
+
     return(
         <Fragment>
             <div

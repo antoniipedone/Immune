@@ -8,6 +8,8 @@ import Receipt from '../Pages/Receipt';
 import Workout from '../Pages/Workout';
 import ContactDoctor from '../Pages/ContactDoctor';
 
+
+// Component with the pages visible only when a user is logged (Routes + Navigation)
 const Pages = props =>{
     return(
         <Fragment>

@@ -5,6 +5,7 @@ const Admin = () =>{
     
     const[messages, setMessages] = useState();
 
+    // Load messages from database and store it on messages variable
     useEffect(() => {
         axios
         .get("https://immune-2fd1f-default-rtdb.europe-west1.firebasedatabase.app/doctorMessage.json")
