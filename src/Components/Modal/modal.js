@@ -10,7 +10,8 @@ const Modal = props => {
             className="Modal"
             style={{
                 transform: props.show ? 'translate(-50%, -50%)' : 'translate(-50%, -100%)' ,
-                opacity: props.show ? '1' : '0'
+                opacity: props.show ? '1' : '0',
+                display: props.show ? 'block' : 'none',
             }} >
                 {props.children}
             </div>

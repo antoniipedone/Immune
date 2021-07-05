@@ -10,7 +10,7 @@ const Profile = props => {
     const clicked = info => {   
         props.clicked(info);
     }
-    // Handler that change the state og weekly diet
+    // Handler that change the state of weekly diet
     const weeklyHabdler = () =>{
         setWeekly(prevState => !prevState);
     }   
